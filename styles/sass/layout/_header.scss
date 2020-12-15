@@ -1,6 +1,7 @@
 .header {
     $root: &;
-
+    margin-bottom: 67px;
+    
     &__container {
         display: flex;
         justify-content: space-between;
