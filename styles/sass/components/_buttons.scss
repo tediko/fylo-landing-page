@@ -1,0 +1,14 @@
+.cta {
+    border: none;
+    border-radius: 3px;
+    color: white;
+    background: $c-blue-bright;
+    font-size: 1rem;
+    font-family: $ff-secondary;
+
+    &--md {
+        height: 40px;
+        font-size: 0.9rem;
+        font-weight: 700;
+    }
+}
