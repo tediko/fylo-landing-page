@@ -1,0 +1,93 @@
+.kv {
+    $root: &;
+
+    &__container {
+        padding: 0 30px;
+
+        @include breakpoint('md') {
+            display: flex;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-flow: column;
+    }
+
+    &__hero {
+        margin-bottom: 36px;
+        text-align: center;
+
+        @include breakpoint('md') {
+            order: 2;
+            align-self: center;
+        }
+
+        img {
+            width: 100%;
+
+            @include breakpoint('sm') {
+                max-width: 550px;
+            }
+
+            @include breakpoint('md') {
+                width: 80%;
+            }
+        }
+    }
+
+    &__heading {
+        margin-bottom: 26px;
+        text-align: center;
+
+        @include breakpoint('sm') {
+            max-width: 441px;
+            margin: 0 auto;
+            margin-bottom: 26px;
+        }
+
+        @include breakpoint('md') {
+            text-align: left;
+        }
+    }
+
+    &__text {
+        margin-bottom: 32px;
+        text-align: center;
+
+        @include breakpoint('sm') {
+            max-width: 441px;
+            margin: 0 auto;
+            margin-bottom: 32px;
+        }
+
+        @include breakpoint('md') {
+           text-align: left;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-flow: column;
+        padding: 0 6px;
+
+        @include breakpoint('sm') {
+            width: 100%;
+            max-width: 450px;
+            margin: 0 auto;
+        }
+    }
+
+    &__input {
+        height: 40px;
+        margin-bottom: 16px;
+        border: 1px solid $c-blue-very-dark;
+        border-radius: 3px;
+        padding-left: 20px;
+
+        &::placeholder {
+            color: $c-gray-light;
+            font-size: 0.8rem;
+        }
+    }
+}
