@@ -13,6 +13,35 @@
   line-height: 1.4;
 }
 
+@media (min-width: 769px) {
+  .h--xlg {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .h--xlg {
+    font-size: 2.5rem;
+  }
+}
+
+.h--lg {
+  font-size: 1.02rem;
+  line-height: 1.4;
+}
+
+@media (min-width: 769px) {
+  .h--lg {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .h--lg {
+    font-size: 2.5rem;
+  }
+}
+
 .text {
   color: #070439;
 }
@@ -20,6 +49,63 @@
 .text--big {
   font-size: 0.88rem;
   line-height: 1.5;
+}
+
+@media (min-width: 1025px) {
+  .text--big {
+    font-size: 1.13rem;
+    line-height: 1.4;
+  }
+}
+
+.text--md {
+  font-size: 0.89rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 1025px) {
+  .text--md {
+    font-size: 1.13rem;
+    line-height: 1.4;
+  }
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../../assets/fonts/icomoon.eot?7xq3jd");
+  src: url("../../assets/fonts/icomoon.eot?7xq3jd#iefix") format("embedded-opentype"), url("../../assets/fonts/icomoon.ttf?7xq3jd") format("truetype"), url("../../assets/fonts/icomoon.woff?7xq3jd") format("woff"), url("../../assets/fonts/icomoon.svg?7xq3jd#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="i-"], [class*=" i-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.i-arrow-right:before {
+  content: "\e903";
+}
+
+.i-instagram:before {
+  content: "\e900";
+}
+
+.i-twitter:before {
+  content: "\e901";
+}
+
+.i-facebook:before {
+  content: "\e902";
 }
 
 html {
@@ -57,8 +143,22 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
+@media (min-width: 1025px) {
+  .cta--md {
+    height: 45px;
+    max-width: 199px;
+    width: 100%;
+  }
+}
+
 .header {
   margin-bottom: 67px;
+}
+
+@media (min-width: 1025px) {
+  .header {
+    margin-bottom: 20px;
+  }
 }
 
 .header__container {
@@ -161,6 +261,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.kv {
+  margin-bottom: 160px;
+}
+
 .kv__container {
   padding: 0 30px;
 }
@@ -171,9 +275,29 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media (min-width: 1025px) {
+  .kv__container {
+    max-width: 1337px;
+    margin: 0 auto;
+  }
+}
+
 .kv__content {
   display: flex;
   flex-flow: column;
+}
+
+@media (min-width: 769px) {
+  .kv__content {
+    flex: 1;
+  }
+}
+
+@media (min-width: 1025px) {
+  .kv__content {
+    align-self: center;
+    margin-top: -25px;
+  }
 }
 
 .kv__hero {
@@ -183,8 +307,10 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 769px) {
   .kv__hero {
+    flex: 1;
     order: 2;
     align-self: center;
+    margin-bottom: 0;
   }
 }
 
@@ -204,6 +330,13 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media (min-width: 1025px) {
+  .kv__hero img {
+    width: 100%;
+    max-width: unset;
+  }
+}
+
 .kv__heading {
   margin-bottom: 26px;
   text-align: center;
@@ -212,14 +345,21 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 481px) {
   .kv__heading {
     max-width: 441px;
-    margin: 0 auto;
-    margin-bottom: 26px;
+    margin: 0 auto 26px auto;
   }
 }
 
 @media (min-width: 769px) {
   .kv__heading {
+    margin: 0 0 26px 0;
     text-align: left;
+  }
+}
+
+@media (min-width: 1025px) {
+  .kv__heading {
+    margin: 0 0 17px 0;
+    max-width: 600px;
   }
 }
 
@@ -231,14 +371,21 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 481px) {
   .kv__text {
     max-width: 441px;
-    margin: 0 auto;
-    margin-bottom: 32px;
+    margin: 0 auto 32px auto;
   }
 }
 
 @media (min-width: 769px) {
   .kv__text {
     text-align: left;
+    margin: 0 0 32px 0;
+  }
+}
+
+@media (min-width: 1025px) {
+  .kv__text {
+    max-width: 580px;
+    margin: 0 0 23px 0;
   }
 }
 
@@ -256,6 +403,20 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media (min-width: 769px) {
+  .kv__form {
+    padding: 0;
+    margin: 0;
+    max-width: unset;
+  }
+}
+
+@media (min-width: 1025px) {
+  .kv__form {
+    flex-flow: row;
+  }
+}
+
 .kv__input {
   height: 40px;
   margin-bottom: 16px;
@@ -264,8 +425,80 @@ h1, h2, h3, h4, h5, h6 {
   padding-left: 20px;
 }
 
+@media (min-width: 1025px) {
+  .kv__input {
+    height: 45px;
+    width: 318px;
+    margin-right: 16px;
+  }
+}
+
 .kv__input::placeholder {
   color: #bfbfbf;
   font-size: 0.8rem;
+}
+
+.about {
+  position: relative;
+  background: #F8F8FE;
+}
+
+.about::before {
+  position: absolute;
+  content: '';
+  top: -69px;
+  left: 0;
+  width: 100vw;
+  height: 69px;
+  background: url("../../assets/img/bg-curve-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+.about__container {
+  padding: 0 21px;
+}
+
+.about__hero {
+  margin-bottom: 99px;
+}
+
+.about__hero img {
+  width: 100%;
+}
+
+.about__content {
+  display: flex;
+  flex-flow: column;
+}
+
+.about__heading {
+  text-align: center;
+  margin-bottom: 21px;
+}
+
+.about__text {
+  color: #585989;
+}
+
+.about__text:not(:last-of-type) {
+  margin-bottom: 16px;
+}
+
+.about__text:last-of-type {
+  margin-bottom: 35px;
+}
+
+.about__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: #3c9f8f;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #3c9f8f;
 }
 /*# sourceMappingURL=main.css.map */
