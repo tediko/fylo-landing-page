@@ -1,5 +1,6 @@
 .kv {
     $root: &;
+    margin-bottom: 100px;
 
     &__container {
         padding: 0 30px;
@@ -7,11 +8,25 @@
         @include breakpoint('md') {
             display: flex;
         }
+
+        @include breakpoint('lg') {
+            max-width: 1337px;
+            margin: 0 auto;
+        }
     }
 
     &__content {
         display: flex;
         flex-flow: column;
+
+        @include breakpoint('md') {
+            flex: 1;
+        }
+
+        @include breakpoint('lg') {
+            align-self: center;
+            margin-top: -25px;
+        }
     }
 
     &__hero {
@@ -19,8 +34,10 @@
         text-align: center;
 
         @include breakpoint('md') {
+            flex: 1;
             order: 2;
             align-self: center;
+            margin-bottom: 0;
         }
 
         img {
@@ -33,6 +50,11 @@
             @include breakpoint('md') {
                 width: 80%;
             }
+
+            @include breakpoint('lg') {
+                width: 100%;
+                max-width: unset;
+            }
         }
     }
 
@@ -42,12 +64,17 @@
 
         @include breakpoint('sm') {
             max-width: 441px;
-            margin: 0 auto;
-            margin-bottom: 26px;
+            margin: 0 auto 26px auto;
         }
 
         @include breakpoint('md') {
+            margin: 0 0 26px 0;
             text-align: left;
+        }
+
+        @include breakpoint('lg') {
+            margin: 0 0 17px 0;
+            max-width: 600px;
         }
     }
 
@@ -57,12 +84,17 @@
 
         @include breakpoint('sm') {
             max-width: 441px;
-            margin: 0 auto;
-            margin-bottom: 32px;
+            margin: 0 auto 32px auto;
         }
 
         @include breakpoint('md') {
            text-align: left;
+           margin: 0 0 32px 0;
+        }
+
+        @include breakpoint('lg') {
+            max-width: 580px;
+            margin: 0 0 23px 0;
         }
     }
 
@@ -76,6 +108,16 @@
             max-width: 450px;
             margin: 0 auto;
         }
+
+        @include breakpoint('md') {
+            padding: 0;
+            margin: 0;
+            max-width: unset;
+        }
+
+        @include breakpoint('lg') {
+            flex-flow: row;
+        }
     }
 
     &__input {
@@ -84,6 +126,12 @@
         border: 1px solid $c-blue-very-dark;
         border-radius: 3px;
         padding-left: 20px;
+
+        @include breakpoint('lg') {
+            height: 45px;
+            width: 318px;
+            margin-right: 16px;
+        }
 
         &::placeholder {
             color: $c-gray-light;
