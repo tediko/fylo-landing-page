@@ -1,6 +1,10 @@
 .header {
     $root: &;
     margin-bottom: 67px;
+
+    @include breakpoint('lg') {
+        margin-bottom: 20px;
+    }
     
     &__container {
         display: flex;
