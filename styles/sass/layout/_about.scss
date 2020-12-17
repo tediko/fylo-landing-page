@@ -10,6 +10,7 @@
 
     @include breakpoint('lg') {
         padding-top: 97px;
+        padding-bottom: 106px;
     }
 
     &::before {
