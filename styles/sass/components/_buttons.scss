@@ -17,4 +17,22 @@
             width: 100%;
         }
     }
+
+    &--big {
+        height: 35px;
+        width: 100%;
+        font-size: 0.67rem;
+        font-weight: 700;
+
+        @include breakpoint('md') {
+            height: 40px;
+            max-width: 200px;
+            width: 100%;
+        }
+
+        @include breakpoint('lg') {
+            height: 49px;
+            font-size: 0.9rem;
+        }
+    }
 }
