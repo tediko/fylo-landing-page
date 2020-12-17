@@ -4,6 +4,14 @@
     background: $c-blue-grayish-light;
     padding-bottom: 81px;
 
+    @include breakpoint('md') {
+        padding-top: 80px;
+    }
+
+    @include breakpoint('lg') {
+        padding-top: 97px;
+    }
+
     &::before {
         position: absolute;
         content: '';
@@ -15,32 +23,71 @@
         background-repeat: no-repeat;
         background-position: top;
         background-size: cover;
+
+        @include breakpoint('md') {
+            top: -77px;
+            height: 77px;
+            background: url('../../assets/img/bg-curve-desktop.svg');
+            background-repeat: no-repeat;
+            background-position: top;
+            background-size: cover;
+        }
     }
 
     &__container {
         padding: 0 21px;
+
+        @include breakpoint('md') {
+            display: flex;
+        }
+
+        @include breakpoint('lg') {
+            max-width: 1360px;
+            margin: 0 auto;
+            padding: 0 40px;
+            justify-content: space-between;
+        }
     }
 
     &__hero {
         margin-bottom: 99px;
+        text-align: center;
+
+        @include breakpoint('md') {
+            order: 2;
+            align-self: center;
+            margin-bottom: 0;
+        }
         
         img {
             width: 100%;
+            max-width: 550px;
         }
     }
 
     &__content {
         display: flex;
         flex-flow: column;
+        align-items: center;
+
+        @include breakpoint('md') {
+            align-items: flex-start;
+        }
     }
 
     &__heading {
         text-align: center;
         margin-bottom: 21px;
+
+        @include breakpoint('md') {
+            text-align: left;
+            margin-bottom: 30px;
+        }
     }
 
     &__text {
         color: $c-blue-desaturated;
+        max-width: 529px;
 
         &:not(:last-of-type) {
             margin-bottom: 16px;
@@ -48,6 +95,10 @@
 
         &:last-of-type {
             margin-bottom: 35px;
+
+            @include breakpoint('lg') {
+                margin-bottom: 17px;
+            }
         }
     }
 
@@ -62,6 +113,27 @@
         margin-bottom: 40px;
         padding-bottom: 5px;
         border-bottom: 1px solid $c-cyan-moderate;
+        transition: color 250ms ease-in,
+                    border 250ms ease-in;
+
+        @include breakpoint('md') {
+            align-self: flex-start;
+        }
+
+        @include breakpoint('lg') {
+            font-size: 1rem;
+        }
+
+        &:hover {
+            color: lighten($c-cyan-moderate, 20);
+            border-color: lighten($c-cyan-moderate, 20);
+
+            #{$root}__arrow-icon {
+                transform-origin: center;
+                transform: rotate(180deg);
+                background: lighten($c-cyan-moderate, 20);
+            }
+        }
     }
 
     &__arrow-icon {
@@ -75,6 +147,8 @@
         color: #fff;
         font-size: 0.4rem;
         border-radius: 50%;
+        transition: transform 250ms ease-in,
+                    background 250ms ease-in;
     }
 
     &__ref {
@@ -82,6 +156,18 @@
         margin: 0 26px;
         border-radius: 6px;
         padding: 40px 15px 22px 25px;
+        max-width: 320px;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.04);
+
+        @include breakpoint('md') {
+            margin: 0;
+        }
+
+        @include breakpoint('lg') {
+            padding: 52px 24px 22px 32px;
+            max-width: 356px;
+            height: 218px;
+        }
     }
 
     &__ref-text {
@@ -90,10 +176,19 @@
         line-height: 1.7;
         margin-bottom: 11px;
 
+        @include breakpoint('lg') {
+            font-size: 0.87rem;
+            margin-bottom: 17px;
+        }
+
         &::before {
             position: absolute;
             content: url(../../assets/img/icon-quotes.svg);
             top: -20px;
+
+            @include breakpoint('lg') {
+                top: -29px;
+            }
         }
     }
 
@@ -105,6 +200,12 @@
             height: 25px;
             border-radius: 50%;
             margin-right: 8px;
+
+            @include breakpoint('lg') {
+                width: 30px;
+                height: 30px;
+                margin-right: 12px;
+            }
         }
     }
 
@@ -116,9 +217,17 @@
 
     &__ref-name {
         font-size: 0.65rem;
+
+        @include breakpoint('lg') {
+            font-size: 0.8rem;
+        }
     }
 
     &__ref-position {
         font-size: 0.45rem;
+
+        @include breakpoint('lg') {
+            font-size: 0.54rem;
+        }
     }
 }
