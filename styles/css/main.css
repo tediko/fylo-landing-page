@@ -643,12 +643,21 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 40px;
   padding-bottom: 5px;
   border-bottom: 1px solid #3c9f8f;
-  transition: color 250ms ease-in, border 250ms ease-in;
 }
 
 @media (min-width: 769px) {
   .about__link {
     align-self: flex-start;
+    transition: color 250ms ease-in, border 250ms ease-in;
+  }
+  .about__link:hover {
+    color: #76cbbd;
+    border-color: #76cbbd;
+  }
+  .about__link:hover .about__arrow-icon {
+    transform-origin: center;
+    transform: rotate(180deg);
+    background: #76cbbd;
   }
 }
 
@@ -656,17 +665,6 @@ h1, h2, h3, h4, h5, h6 {
   .about__link {
     font-size: 1rem;
   }
-}
-
-.about__link:hover {
-  color: #76cbbd;
-  border-color: #76cbbd;
-}
-
-.about__link:hover .about__arrow-icon {
-  transform-origin: center;
-  transform: rotate(180deg);
-  background: #76cbbd;
 }
 
 .about__arrow-icon {
@@ -680,7 +678,12 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   font-size: 0.4rem;
   border-radius: 50%;
-  transition: transform 250ms ease-in, background 250ms ease-in;
+}
+
+@media (min-width: 769px) {
+  .about__arrow-icon {
+    transition: transform 250ms ease-in, background 250ms ease-in;
+  }
 }
 
 .about__ref {

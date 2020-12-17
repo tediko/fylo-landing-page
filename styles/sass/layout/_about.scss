@@ -118,26 +118,26 @@
         margin-bottom: 40px;
         padding-bottom: 5px;
         border-bottom: 1px solid $c-cyan-moderate;
-        transition: color 250ms ease-in,
-                    border 250ms ease-in;
 
         @include breakpoint('md') {
             align-self: flex-start;
+            transition: color 250ms ease-in,
+                        border 250ms ease-in;
+
+            &:hover {
+                color: lighten($c-cyan-moderate, 20);
+                border-color: lighten($c-cyan-moderate, 20);
+
+                #{$root}__arrow-icon {
+                    transform-origin: center;
+                    transform: rotate(180deg);
+                    background: lighten($c-cyan-moderate, 20);
+                }
+            }
         }
 
         @include breakpoint('lg') {
             font-size: 1rem;
-        }
-
-        &:hover {
-            color: lighten($c-cyan-moderate, 20);
-            border-color: lighten($c-cyan-moderate, 20);
-
-            #{$root}__arrow-icon {
-                transform-origin: center;
-                transform: rotate(180deg);
-                background: lighten($c-cyan-moderate, 20);
-            }
         }
     }
 
@@ -152,8 +152,11 @@
         color: #fff;
         font-size: 0.4rem;
         border-radius: 50%;
-        transition: transform 250ms ease-in,
-                    background 250ms ease-in;
+        
+        @include breakpoint('md') {
+            transition: transform 250ms ease-in,
+                        background 250ms ease-in;
+        }
     }
 
     &__ref {
