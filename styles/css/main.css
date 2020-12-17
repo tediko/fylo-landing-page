@@ -72,8 +72,8 @@
 
 @font-face {
   font-family: 'icomoon';
-  src: url("../../assets/fonts/icomoon.eot?7xq3jd");
-  src: url("../../assets/fonts/icomoon.eot?7xq3jd#iefix") format("embedded-opentype"), url("../../assets/fonts/icomoon.ttf?7xq3jd") format("truetype"), url("../../assets/fonts/icomoon.woff?7xq3jd") format("woff"), url("../../assets/fonts/icomoon.svg?7xq3jd#icomoon") format("svg");
+  src: url("../../assets/fonts/icomoon.eot?e1cg9q");
+  src: url("../../assets/fonts/icomoon.eot?e1cg9q#iefix") format("embedded-opentype"), url("../../assets/fonts/icomoon.ttf?e1cg9q") format("truetype"), url("../../assets/fonts/icomoon.woff?e1cg9q") format("woff"), url("../../assets/fonts/icomoon.svg?e1cg9q#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -94,6 +94,20 @@
 
 .i-arrow-right:before {
   content: "\e903";
+}
+
+.i-icon-quotes:before {
+  content: "\e906";
+}
+
+.i-icon-email:before {
+  content: "\e904";
+  color: #fff;
+}
+
+.i-icon-phone:before {
+  content: "\e905";
+  color: #fff;
 }
 
 .i-instagram:before {
@@ -441,6 +455,7 @@ h1, h2, h3, h4, h5, h6 {
 .about {
   position: relative;
   background: #F8F8FE;
+  padding-bottom: 81px;
 }
 
 .about::before {
@@ -498,7 +513,66 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   font-size: 0.8rem;
   color: #3c9f8f;
+  margin-bottom: 40px;
   padding-bottom: 5px;
   border-bottom: 1px solid #3c9f8f;
+}
+
+.about__arrow-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12px;
+  height: 12px;
+  margin-left: 5px;
+  background: #3c9f8f;
+  color: #fff;
+  font-size: 0.4rem;
+  border-radius: 50%;
+}
+
+.about__ref {
+  background: #fff;
+  margin: 0 26px;
+  border-radius: 6px;
+  padding: 40px 15px 22px 25px;
+}
+
+.about__ref-text {
+  position: relative;
+  font-size: 0.68rem;
+  line-height: 1.7;
+  margin-bottom: 11px;
+}
+
+.about__ref-text::before {
+  position: absolute;
+  content: url(../../assets/img/icon-quotes.svg);
+  top: -20px;
+}
+
+.about__ref-author {
+  display: flex;
+}
+
+.about__ref-author img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.about__ref-description {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+}
+
+.about__ref-name {
+  font-size: 0.65rem;
+}
+
+.about__ref-position {
+  font-size: 0.45rem;
 }
 /*# sourceMappingURL=main.css.map */
