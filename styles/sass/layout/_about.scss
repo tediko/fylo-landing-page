@@ -90,6 +90,10 @@
         color: $c-blue-desaturated;
         max-width: 529px;
 
+        @include breakpoint('lg') {
+            color: $c-blue-very-dark;
+        }
+
         &:not(:last-of-type) {
             margin-bottom: 16px;
         }
