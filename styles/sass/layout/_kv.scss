@@ -2,6 +2,10 @@
     $root: &;
     margin-bottom: 160px;
 
+    @include breakpoint('lg') {
+        margin-bottom: 239px;
+    }
+
     &__container {
         padding: 0 30px;
 
