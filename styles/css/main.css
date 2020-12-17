@@ -159,6 +159,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
 
+a:focus, input:focus, button:focus {
+  outline-offset: 5px;
+  outline: 1px dashed rgba(60, 159, 143, 0.5);
+}
+
 * {
   margin: 0;
   padding: 0;
