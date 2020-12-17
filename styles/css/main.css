@@ -183,24 +183,25 @@ a:focus, input:focus, button:focus {
   z-index: 1;
 }
 
-.cta::before {
-  position: absolute;
-  content: '';
-  top: 35px;
-  left: -50%;
-  width: 150%;
-  height: 200px;
-  border-radius: 50%;
-  background: #628af9;
-  transform: translate(17%);
-  transition: transform 250ms ease-in, opacity 250ms ease-in;
-  opacity: 0;
-  z-index: -1;
-}
-
-.cta:hover::before {
-  transform: translate(17%, -50%);
-  opacity: 1;
+@media (min-width: 769px) {
+  .cta::before {
+    position: absolute;
+    content: '';
+    top: 35px;
+    left: -50%;
+    width: 150%;
+    height: 200px;
+    border-radius: 50%;
+    background: #628af9;
+    transform: translate(17%);
+    transition: transform 250ms ease-in, opacity 250ms ease-in;
+    opacity: 0;
+    z-index: -1;
+  }
+  .cta:hover::before {
+    transform: translate(17%, -50%);
+    opacity: 1;
+  }
 }
 
 .cta--md {

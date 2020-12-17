@@ -10,26 +10,27 @@
     overflow: hidden;
     z-index: 1;
     
-
-    &::before {
-        position: absolute;
-        content: '';
-        top: 35px;
-        left: -50%;
-        width: 150%;
-        height: 200px;
-        border-radius: 50%;
-        background: lighten($c-blue-bright, 10);
-        transform: translate(17%);
-        transition: transform 250ms ease-in,
-                    opacity 250ms ease-in;
-        opacity: 0;
-        z-index: -1;
-    }
-
-    &:hover::before {
-        transform: translate(17%, -50%);
-        opacity: 1;
+    @include breakpoint('md') {
+        &::before {
+            position: absolute;
+            content: '';
+            top: 35px;
+            left: -50%;
+            width: 150%;
+            height: 200px;
+            border-radius: 50%;
+            background: lighten($c-blue-bright, 10);
+            transform: translate(17%);
+            transition: transform 250ms ease-in,
+                        opacity 250ms ease-in;
+            opacity: 0;
+            z-index: -1;
+        }
+    
+        &:hover::before {
+            transform: translate(17%, -50%);
+            opacity: 1;
+        }
     }
 
     &--md {
