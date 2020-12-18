@@ -154,6 +154,11 @@
             color: $c-gray-light;
             font-size: 0.8rem;
         }
+
+        &:invalid {
+            border: 1px solid $c-blue-very-dark;
+            box-shadow: none;
+        }
     }
 
     &__form-error {
