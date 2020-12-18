@@ -35,6 +35,16 @@
         }
     }
 
+    &.active {
+        #{$root}__content {
+            animation: about-content-slide 1000ms ease-in forwards;
+        }
+
+        #{$root}__hero {
+            animation: about-hero-scale 1000ms ease-in forwards;
+        }
+    }
+
     &__container {
         padding: 0 21px;
 

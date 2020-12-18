@@ -20,6 +20,8 @@
     }
 
     &__logo {
+        animation: header-logo-scale 1000ms ease-in;
+
         img {
             display: block;
             width: 78px;
@@ -41,6 +43,7 @@
     &__list {
         display: flex;
         list-style: none;
+        animation: header-nav-slide 1000ms ease-in;
     }
 
     &__item {
