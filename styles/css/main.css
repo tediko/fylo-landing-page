@@ -105,6 +105,18 @@
   }
 }
 
+@keyframes error-shake {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 @font-face {
   font-family: 'icomoon';
   src: url("../../assets/fonts/icomoon.eot?e1cg9q");
@@ -496,6 +508,7 @@ a:focus, input:focus, button:focus {
 }
 
 .kv__form {
+  position: relative;
   display: flex;
   flex-flow: column;
   padding: 0 6px;
@@ -523,6 +536,16 @@ a:focus, input:focus, button:focus {
   }
 }
 
+.kv__form.active .kv__input {
+  border: 1px solid tomato;
+}
+
+.kv__form.active .kv__form-error {
+  visibility: visible;
+  height: 20px;
+  animation: error-shake 250ms ease-in;
+}
+
 .kv__input {
   height: 40px;
   margin-bottom: 16px;
@@ -542,6 +565,33 @@ a:focus, input:focus, button:focus {
 .kv__input::placeholder {
   color: #bfbfbf;
   font-size: 0.8rem;
+}
+
+.kv__form-error {
+  visibility: hidden;
+  display: inline-block;
+  height: 0;
+  margin-top: -12px;
+  margin-bottom: 5px;
+  font-size: 0.8rem;
+  text-align: center;
+  color: tomato;
+  transform-origin: left;
+}
+
+@media (min-width: 769px) {
+  .kv__form-error {
+    margin-left: 10px;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1025px) {
+  .kv__form-error {
+    position: absolute;
+    top: 63px;
+    left: 0;
+  }
 }
 
 .about {
@@ -877,6 +927,7 @@ a:focus, input:focus, button:focus {
 }
 
 .signin__form {
+  position: relative;
   max-width: 270px;
   margin: 0 auto;
 }
@@ -898,6 +949,24 @@ a:focus, input:focus, button:focus {
 @media (min-width: 1025px) {
   .signin__form {
     padding-left: 119px;
+  }
+}
+
+.signin__form.active .signin__input {
+  border: 1px solid tomato;
+}
+
+.signin__form.active .signin__form-error {
+  visibility: visible;
+  height: 20px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  animation: error-shake 250ms ease-in;
+}
+
+@media (min-width: 1025px) {
+  .signin__form.active .signin__form-error {
+    margin-top: -10px;
   }
 }
 
@@ -935,6 +1004,23 @@ a:focus, input:focus, button:focus {
 .signin__input::placeholder {
   font-size: 0.75rem;
   color: #bfbfbf;
+}
+
+.signin__form-error {
+  visibility: hidden;
+  display: block;
+  height: 0;
+  font-size: 0.8rem;
+  text-align: center;
+  color: tomato;
+  transform-origin: left;
+}
+
+@media (min-width: 769px) {
+  .signin__form-error {
+    margin-left: 10px;
+    text-align: left;
+  }
 }
 
 .footer {
