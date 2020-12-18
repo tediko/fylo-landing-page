@@ -61,6 +61,7 @@
     }
 
     &__hero {
+        opacity: 0;
         margin-bottom: 99px;
         text-align: center;
 
@@ -77,6 +78,7 @@
     }
 
     &__content {
+        opacity: 0;
         display: flex;
         flex-flow: column;
         align-items: center;
