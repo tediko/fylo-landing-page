@@ -26,6 +26,7 @@
     }
 
     &__content {
+        opacity: 0;
         text-align: center;
 
         @include breakpoint('md') {
@@ -53,6 +54,7 @@
     }
 
     &__form {
+        opacity: 0;
         position: relative;
         max-width: 270px;
         margin: 0 auto;
