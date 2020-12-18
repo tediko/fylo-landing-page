@@ -567,6 +567,11 @@ a:focus, input:focus, button:focus {
   font-size: 0.8rem;
 }
 
+.kv__input:invalid {
+  border: 1px solid #070439;
+  box-shadow: none;
+}
+
 .kv__form-error {
   visibility: hidden;
   display: inline-block;
@@ -1004,6 +1009,11 @@ a:focus, input:focus, button:focus {
 .signin__input::placeholder {
   font-size: 0.75rem;
   color: #bfbfbf;
+}
+
+.signin__input:invalid {
+  border: none;
+  box-shadow: none;
 }
 
 .signin__form-error {

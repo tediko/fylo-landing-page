@@ -109,6 +109,11 @@
             font-size: 0.75rem;
             color: $c-gray-light;
         }
+
+        &:invalid {
+            border: none;
+            box-shadow: none;
+        }
     }
 
     &__form-error {
