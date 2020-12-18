@@ -22,6 +22,7 @@
     &__content {
         display: flex;
         flex-flow: column;
+        animation: kv-content-slide 1000ms ease-in;
 
         @include breakpoint('md') {
             flex: 1;
@@ -36,6 +37,7 @@
     &__hero {
         margin-bottom: 36px;
         text-align: center;
+        animation: kv-hero-scale 1000ms ease-in;
 
         @include breakpoint('md') {
             flex: 1;

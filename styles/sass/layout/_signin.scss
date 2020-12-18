@@ -2,6 +2,15 @@
     $root: &;
     background: $c-blue-desaturated;
 
+    &.active {
+        #{$root}__content {
+            animation: signin-content-slide 1000ms ease-in forwards;
+        }
+
+        #{$root}__form {
+            animation: signin-form-slide 1000ms ease-in forwards;
+        }
+    }
     &__container {
         padding: 54px 37px;
 
