@@ -1234,6 +1234,12 @@ a:focus, input:focus, button:focus {
   margin-right: 10px;
 }
 
+.footer__contact-link {
+  text-decoration: none;
+  color: #fff;
+  font-style: normal;
+}
+
 .footer__nav {
   margin-bottom: 48px;
 }
