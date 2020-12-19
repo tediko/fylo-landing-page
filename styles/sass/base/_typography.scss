@@ -18,6 +18,6 @@ h1, h2, h3, h4, h5, h6 {
 a, input, button {
     &:focus {
         outline-offset: 5px;
-        outline: 1px dashed transparentize($c-cyan-moderate, 0.5);
+        outline: 2px dashed transparentize($c-cyan-moderate, 0.5);
     }
 }
