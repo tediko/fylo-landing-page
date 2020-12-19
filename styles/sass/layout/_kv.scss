@@ -142,7 +142,7 @@
     &__input {
         height: 40px;
         margin-bottom: 16px;
-        border: 1px solid $c-blue-very-dark;
+        border: 1px solid transparentize($c-blue-very-dark, 0.5);
         border-radius: 3px;
         padding-left: 20px;
 
