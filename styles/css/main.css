@@ -301,7 +301,7 @@ a:focus, input:focus, button:focus {
   background: #3065f8;
   font-size: 1rem;
   font-family: "Raleway", sans-serif;
-  box-shadow: 1px 1px 5px rgba(48, 101, 248, 0.6);
+  box-shadow: 1px 1px 1px rgba(48, 101, 248, 0.6);
   cursor: pointer;
   overflow: hidden;
   z-index: 1;
